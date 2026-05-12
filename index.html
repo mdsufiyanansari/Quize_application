@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz App Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-box">
+        <h1>Quiz App</h1>
+
+        <!-- Timer -->
+        <div class="timer-circle">
+            <span id="timer">15</span>
+        </div>
+
+        <h2 id="question"></h2>
+        <div id="answers" class="answers"></div>
+
+        <div class="buttons">
+            <button id="prevBtn">Prev</button>
+            <button id="skipBtn">Skip</button>
+            <button id="nextBtn">Next</button>
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+
+    <!-- QUESTION PALETTE -->
+    <div class="palette" id="palette"></div>
+
+</div>
+
+<!-- RESULT -->
+<div id="result-box" class="hidden result-container">
+
+    <div class="result-card">
+
+        <h2>🎯 Quiz Result</h2>
+
+        <!-- SCORE -->
+        <h3 id="score" class="score-text"></h3>
+
+        <!-- SUMMARY CARDS -->
+        <div class="summary">
+            <div class="card correct-card">
+                <h3 id="correctCount">0</h3>
+                <p>Correct</p>
+            </div>
+
+            <div class="card wrong-card">
+                <h3 id="wrongCount">0</h3>
+                <p>Wrong</p>
+            </div>
+
+            <div class="card skip-card">
+                <h3 id="skipCount">0</h3>
+                <p>Skipped</p>
+            </div>
+        </div>
+
+        <!-- CHART -->
+        <div class="chart-box">
+            <canvas id="resultChart"></canvas>
+        </div>
+
+        <!-- ANSWER SHEET -->
+        <h3 class="answer-title">Answer Review</h3>
+        <div id="review" class="answer-sheet"></div>
+
+        <button onclick="restartQuiz()" class="restart-btn">
+            🔄 Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
